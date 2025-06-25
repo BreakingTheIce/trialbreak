@@ -397,9 +397,55 @@
   </style>
 </head>
 <body>
-  <header>
+  <header><!-- Hero Section Example -->
+<div class="hero" id="home">
+  <div class="hero-image"></div>
+  <div class="hero-content">
+    <h1>Break The Ice Sports</h1>
+  </div>
+</div>
+
+<style>
+.hero {
+  position: relative;
+  height: 62vh;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+.hero-image {
+  position: absolute;
+  inset: 0;
+  background: url('Backdrop.jpg') center/cover no-repeat;
+  z-index: 0;
+  /* Dark overlay on the image */
+  filter: brightness(0.45) contrast(1.1);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-content h1 {
+  font-size: 3.1rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: 2.5px;
+  line-height: 1.13;
+  text-shadow: 0 3px 20px rgba(0,0,0,0.25);
+}
+</style>
     <div class="nav-inner">
-      <a href="#home" class="nav-logo">Break The Ice Sports</a>
+      <a href="#home" class="nav-logo">Breaking The Ice Sports</a>
       <nav>
         <a href="#home" class="active">Home</a>
         <a href="#missions">Missions</a>
@@ -411,7 +457,7 @@
   </header>
   <div class="hero" id="home">
     <div class="hero-content">
-      <h1>Break The Ice Sports</h1>
+      <h1>Breaking The Ice Sports</h1>
     </div>
   </div>
   <main>
@@ -430,7 +476,7 @@
           </p>
         </div>
         <div class="flex-img">
-          <img src="mission-image.jpg" alt="Children playing soccer">
+          <img src="misson-image.jpg" alt="Children playing soccer">
         </div>
       </div>
     </section>
@@ -449,7 +495,7 @@
           </p>
         </div>
         <div class="flex-img">
-          <img src="why-image.jpg" alt="Kids enjoying soccer">
+          <img src="Why.jpg" alt="Kids enjoying soccer">
         </div>
       </div>
       <h2 class="team-title">Meet Our Executive Team</h2>
