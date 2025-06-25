@@ -45,8 +45,11 @@
       justify-content: space-between;
       height: 70px;
       padding: 0 36px;
+      width: 100%;
+      box-sizing: border-box;
     }
     .nav-logo {
+      flex: 1 0 auto;
       font-size: 1.65rem;
       font-weight: 800;
       letter-spacing: .12em;
@@ -55,36 +58,37 @@
       transition: color 0.2s;
       display: flex;
       align-items: center;
+      min-width: 210px;
+    }
+    nav {
+      flex: 2 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
     }
     nav a {
       color: var(--text-main);
       text-decoration: none;
-      margin: 0 22px;
-      font-weight: 600;
-      font-size: 1.06rem;
-      position: relative;
-      transition: color 0.2s;
-      opacity: 0.86;
-    }
-    nav a:after {
-      content: '';
-      display: block;
-      margin: 0 auto;
-      width: 0;
-      height: 2.5px;
-      background: var(--primary);
-      transition: width 0.2s;
-      border-radius: 2px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 8px 0;
+      background: none;
+      border: none;
+      outline: none;
+      border-bottom: 2.5px solid transparent;
+      transition: color 0.18s, border-bottom 0.18s;
+      letter-spacing: 0.02em;
+      opacity: 0.9;
+      display: inline-block;
     }
     nav a:hover,
     nav a.active {
       color: var(--primary);
-    }
-    nav a:hover:after,
-    nav a.active:after {
-      width: 70%;
+      border-bottom: 2.5px solid var(--primary);
     }
     .donate-btn {
+      flex: 1 0 auto;
       background: var(--primary);
       color: #fff;
       border: none;
@@ -95,14 +99,16 @@
       letter-spacing: 0.02em;
       cursor: pointer;
       box-shadow: 0 2px 12px rgba(26,137,199,0.09);
-      transition: var(--transition);
+      transition: background 0.2s;
+      margin-left: 40px;
+      min-width: 120px;
     }
     .donate-btn:hover {
       background: #126090;
     }
     .hero {
       position: relative;
-      margin-top: 70px; /* height of the fixed header */
+      margin-top: 70px;
       height: 62vh;
       min-height: 380px;
       display: flex;
@@ -367,6 +373,24 @@
       margin-top: 60px;
     }
     @media (max-width: 900px) {
+      .nav-inner {
+        flex-direction: column;
+        height: auto;
+        padding: 12px 10px;
+        gap: 10px;
+      }
+      nav {
+        gap: 18px;
+        margin: 10px 0;
+        flex-wrap: wrap;
+      }
+      .donate-btn {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+        max-width: 180px;
+        min-width: unset;
+      }
       .flex-row {
         flex-direction: column;
         gap: 22px;
@@ -381,7 +405,10 @@
     @media (max-width: 600px) {
       .nav-inner {
         padding: 0 5px;
-        height: 54px;
+        height: auto;
+      }
+      nav {
+        gap: 8px;
       }
       .hero-content h1 {
         font-size: 1.47rem;
