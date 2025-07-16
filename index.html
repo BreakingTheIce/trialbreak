@@ -49,78 +49,73 @@
     box-sizing: border-box;
   }
   .nav-logo {
-    /* flex: 1 0 auto; Removed or overridden */
-    font-size: 1.65rem;
-    font-weight: 800;
-    letter-spacing: .12em;
-    color: var(--primary);
-    text-decoration: none;
-    transition: color 0.2s;
-    display: flex;
-    align-items: center;
-    min-width: 210px;
+  /* Keep existing font, color, etc. */
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  min-width: 210px; /* Ensures it doesn't shrink too much */
 
-    /* Added for spacing control */
-    flex-grow: 0;
-    flex-shrink: 0;
-    white-space: nowrap;
-    margin-right: auto; /* Pushes content to the right */
+  /* Key changes for spacing */
+  flex-grow: 0;   /* Prevent the logo from growing */
+  flex-shrink: 0;  /* Prevent the logo from shrinking */
+  margin-right: 40px; /* Add explicit right margin to create space */
+  white-space: nowrap; /* Prevent "Breaking The Ice Sports" from wrapping */
   }
   nav {
-    flex: 2 1 auto;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; Changed to flex-end */
-    gap: 40px;
+      /* Keep existing display, align-items, gap */
+      display: flex;
+      align-items: center;
+      gap: 40px;
 
-    /* Added for spacing control */
-    flex-grow: 1; /* Allow nav to take remaining space */
-    justify-content: flex-end; /* Align items to the right */
-  }
+      /* Key changes for spacing */
+      flex-grow: 1; /* Allow the nav to take up available space */
+      justify-content: flex-end; /* Push nav items to the right within their container */
+    }
   nav a {
-    color: var(--text-main);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    padding: 8px 0;
-    background: none;
-    border: none;
-    outline: none;
-    border-bottom: 2.5px solid transparent;
-    transition: color 0.18s, border-bottom 0.18s;
-    letter-spacing: 0.02em;
-    opacity: 0.9;
-    display: inline-block;
-  }
-  nav a:hover,
-  nav a.active {
-    color: var(--primary);
-    border-bottom: 2.5px solid var(--primary);
-  }
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 8px 0;
+      background: none;
+      border: none;
+      outline: none;
+      border-bottom: 2.5px solid transparent;
+      transition: color 0.18s, border-bottom 0.18s;
+      letter-spacing: 0.02em;
+      opacity: 0.9;
+      display: inline-block;
+    }
+    nav a:hover,
+    nav a.active {
+      color: var(--primary);
+      border-bottom: 2.5px solid var(--primary);
+    }
   .donate-btn {
-    flex: 1 0 auto;
-    background: var(--primary);
-    color: #fff;
-    border: none;
-    padding: 10px 32px;
-    border-radius: 28px;
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 0.02em;
-    cursor: pointer;
-    box-shadow: 0 2px 12px rgba(26,137,199,0.09);
-    transition: background 0.2s;
-    /* margin-left: 40px; Adjusted */
-    min-width: 120px;
+      /* Keep existing styles */
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 10px 32px;
+      border-radius: 28px;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      box-shadow: 0 2px 12px rgba(26,137,199,0.09);
+      transition: background 0.2s;
+      min-width: 120px;
 
-    /* Adjusted for spacing control */
-    margin-left: 30px; /* Adjusted to create separation */
-    flex-shrink: 0; /* Prevent it from shrinking */
-    flex-grow: 0; /* Prevent it from growing */
-  }
-  .donate-btn:hover {
-    background: #126090;
-  }
+      /* Key changes for spacing */
+      margin-left: 40px; /* Add explicit left margin for space from nav links */
+      flex-shrink: 0; /* Prevent the button from shrinking */
+      flex-grow: 0; /* Prevent the button from growing */
+    }
   .hero {
     position: relative;
     margin-top: 70px;
