@@ -441,6 +441,34 @@
     .card {
       padding: 24px 7vw 18px 7vw;
     }
+    
+    .progress {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 30px;
+  background: #9cbab4;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.progress__fill {
+  width: 0%;
+  height: 100%;
+  background: #1a89c7; /* Use your site’s primary color */
+  transition: all 0.3s ease-in-out;
+}
+
+.progress__text {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  font: bold 14px 'Montserrat', sans-serif;
+  color: white;
+}
+
   }
 </style>
 </head>
@@ -586,6 +614,21 @@
         
       </div>
     </section>
+    <section class="card">
+  <h2>Our Goal Progress</h2>
+  <div class="progress" id="goalProgress">
+    <div class="progress__fill" style="width: 0%;"></div>
+    <span class="progress__text">0%</span>
+  </div>
+      <script>
+  function updateProgressBar(progressBar, value) {
+    value = Math.round(value);
+    progressBar.querySelector(".progress__fill").style.width = `${value}%`;
+    progressBar.querySelector(".progress__text").textContent = `${value}%`;
+  }
+</script>
+
+</section>
   </main>
   <footer>
     &copy; 2025 Breaking The Ice Sports &bull; All rights reserved
