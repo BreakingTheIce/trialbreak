@@ -58,23 +58,23 @@
   transition: color 0.2s;
   display: flex;
   align-items: center;
-  min-width: 210px; /* Ensures it doesn't shrink too much */
+  min-width: 210px; 
 
-  /* Key changes for spacing */
-  flex-grow: 0;   /* Prevent the logo from growing */
-  flex-shrink: 0;  /* Prevent the logo from shrinking */
-  margin-right: 40px; /* Add explicit right margin to create space */
-  white-space: nowrap; /* Prevent "Breaking The Ice Sports" from wrapping */
+  
+  flex-grow: 0;  
+  flex-shrink: 0;  
+  margin-right: 40px;
+  white-space: nowrap; 
   }
   nav {
-      /* Keep existing display, align-items, gap */
+     
       display: flex;
       align-items: center;
       gap: 40px;
 
-      /* Key changes for spacing */
-      flex-grow: 1; /* Allow the nav to take up available space */
-      justify-content: flex-end; /* Push nav items to the right within their container */
+    
+      flex-grow: 1; 
+      justify-content: flex-end; 
     }
   nav a {
       color: var(--text-main);
@@ -107,8 +107,8 @@
   letter-spacing: 0.02em;
   cursor: pointer;
   box-shadow: 0 2px 12px rgba(26,137,199,0.09);
-  /* IMPORTANT: Update this line to transition all properties smoothly */
-  transition: all 0.3s ease; /* This enables smooth animation for all changes */
+  
+  transition: all 0.3s ease; 
   min-width: 120px;
   margin-left: 40px;
   flex-shrink: 0;
@@ -118,9 +118,9 @@
 }
 
 .donate-btn:hover {
-  background: #126090; /* Keep the darker background on hover */
-  transform: translateY(-3px) scale(1.02); /* Lifts and slightly enlarges */
-  box-shadow: 0 8px 20px rgba(26,137,199,0.25); /* More prominent shadow */
+  background: #126090;
+  transform: translateY(-3px) scale(1.02); 
+  box-shadow: 0 8px 20px rgba(26,137,199,0.25); 
 }
   .hero {
     position: relative;
@@ -434,10 +434,10 @@ h3 {
       gap: 18px;
       margin: 10px 0;
       flex-wrap: wrap;
-      justify-content: center; /* Center nav items on smaller screens */
+      justify-content: center; 
     }
     .nav-logo {
-      margin-right: 0; /* Remove auto-margin on smaller screens */
+      margin-right: 0; 
     }
     .donate-btn {
       margin-left: 0;
